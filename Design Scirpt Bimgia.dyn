@@ -1,0 +1,231 @@
+{
+  "Uuid": "213d6022-f3ab-4b70-b835-8eedeb34a98a",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Design Scirpt Bimgia",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonStringNode, PythonNodeModels",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "30bf93e12bf245ca97b8943b7da348d5",
+      "Inputs": [
+        {
+          "Id": "0c051c06d13b491fadea2d27b9fcdda7",
+          "Name": "script",
+          "Description": "Python script to run.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "059304503df947cc909db7f5d3776d71",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "05c741e38c9143b08e5e9f048ba59224",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs a Python script from a string."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "f = open(r\"D:\\030-Dynamo\\Tool\\Training-Dynamo-2024\\DesignScript.py\", \"r\")\r\n\r\nOUT = f.read()",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "10946dd062f04a32a44352d3ee01dea1",
+      "Inputs": [
+        {
+          "Id": "09313a32902346928cd92cec41d2c19a",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7c3149fda2e14c74b0bd378ecb16e535",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "a77f588c072a471e98e6fe2209b0424c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5b167e4c1b2d423a8224174f15a750a0",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Enables selection between True and False"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "7c3149fda2e14c74b0bd378ecb16e535",
+      "End": "0c051c06d13b491fadea2d27b9fcdda7",
+      "Id": "ccb2a0c2799e46e68cd9033ce324f43c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5b167e4c1b2d423a8224174f15a750a0",
+      "End": "09313a32902346928cd92cec41d2c19a",
+      "Id": "37d5573416e24e2084d02693df63547a",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.17",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "4.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.0.3472",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Python Script From String",
+        "ShowGeometry": true,
+        "Id": "30bf93e12bf245ca97b8943b7da348d5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 523.96947907063782,
+        "Y": 194.38620268882636
+      },
+      {
+        "Name": "Python Script",
+        "ShowGeometry": true,
+        "Id": "10946dd062f04a32a44352d3ee01dea1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 277.90068022164718,
+        "Y": 68.80824141331135
+      },
+      {
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Id": "a77f588c072a471e98e6fe2209b0424c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7.7529874874494453,
+        "Y": 189.88465228896627
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "5c4bda14378b44f8aa8ca9d2d24f9e0d",
+        "Title": "Design Scirpt",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "30bf93e12bf245ca97b8943b7da348d5",
+          "10946dd062f04a32a44352d3ee01dea1",
+          "a77f588c072a471e98e6fe2209b0424c"
+        ],
+        "HasNestedGroups": false,
+        "Left": -2.2470125125505547,
+        "Top": -4.19175858668865,
+        "Width": 803.21649158318837,
+        "Height": 360.577961275515,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 68.80824141331135,
+        "InitialHeight": 317.577961275515,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 195.10056487703775,
+    "Y": 218.33993637585368,
+    "Zoom": 0.74804557627634261
+  }
+}
